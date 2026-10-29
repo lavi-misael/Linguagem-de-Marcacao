@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Exercicio 1</title>
+	</head>
+	<body>
+		<form action="#" method="POST">
+			
+			<label for="cod">Código: </label>
+			<input type="text" id="cod" name="cod" placeholder="Código..." value="0" disabled>
+			<br><br>
+			
+			<label for="num1">N° do Contrato: </label>
+			<input type="text" id="num1" name="num1"  minlength="3" maxlength="255">
+			<label for="num2">N° da Loja: </label>
+			<input type="text" id="num2" name="num2"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="descricao">Descrição: </label>
+			<input type="text" id="descricao" name="descricao"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="data">Data: </label>
+			<input type="date" id="data" name="data" required>
+			<br><br>
+			
+			<label for="operadora">Operadora: </label>
+			<select name="operadora" id="operadora">
+				<option value=""></option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<br><br>
+			
+			<label for="filial">Filial: </label>
+			<select name="filial" id="filial">
+				<option value=""></option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<br><br>
+			
+			<label for="empresa_matriz">Empresa Matriz: </label>
+			<select name="empresa_matriz" id="empresa_matriz">
+				<option value=""></option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<br><br>
+			
+			<label for="contas">Origem das Contas Contabeis: </label>
+			<select name="contas" id="contas">
+				<option value="">Contrato</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<input type="checkbox" id="deposito" name="deposito" required > Depósito na conta informada no arquivo
+			<br><br>
+			
+			<label for="contas">Status do Contrato: </label>
+			<select name="contas" id="contas">
+				<option value="">Ativo</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<input type="checkbox" id="conciliacao" name="conciliacao" required > Concialiação Consolida
+			<label for="con">/ Permitir conciliar manualmente quando há variação de até: </label>
+			<input type="text" id="con" name="con" placeholder="Permitir" value="0,00" disabled>
+			<br><br>
+			
+			<label for="contas">Indentificar Comprovante por: </label>
+			<select name="contas" id="contas">
+				<option value="">Numero de Autorização</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				
+			</select>
+			<input type="checkbox" id="remover" name="remover" required > Remover zeros esquerda do N° Comprovante 
+			<input type="checkbox" id="validar" name="validar" required > Validar valores na conciliação automática 
+			<br><br>
+			
+			<input type="checkbox" id="transacao" name="transacao" required > Usar campo de usuário[Data de Transação do Cartão] do Contas a Receber para indentificar o comprovante na concialiação
+			<br><br>
+			
+			<input type="checkbox" id="gerar" name="gerar" required > Gerar Contas a Receber por conta para comprovantes não identificados
+			<input type="checkbox" id="receber" name="receber" required > Contas a Receber Agrupados
+			<br><br>
+			
+			<input type="checkbox" id="projeto_cadastro" name="projeto_cadastro" required > Usar Projeto do Cadastro de Equipamento
+			<input type="checkbox" id="receber" name="receber" required > LMC Agrupado de Comprovante de Cartão
+			<br><br>
+			
+			<label for="cartao">Cartão: </label>
+			<input type="text" id="cartao" name="cartao" placeholder="Código..." value="Não Informado" disabled>
+			<br><br>
+			
+			<label for="pagamento">Forma de Pagamento: </label>
+			<input type="text" id="pagamento" name="pagamento" placeholder="Código..." value="Não Informado" disabled>
+			<br><br>
+			
+			<p><b>Contabilização: </b></p>
+			
+			<label for="n_conta_provisão">Conta de Provisão: </label>
+			<input type="num" id="n_conta_provisão" name="n_conta_provisão"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_provisão" name="tex_conta_provisão"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_banco">Conta do Banco: </label>
+			<input type="num" id="n_conta_banco" name="n_conta_banco"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_banco" name="tex_conta_banco"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_comissão">Conta para Comissão: </label>
+			<input type="num" id="n_conta_comissão" name="n_conta_comissão"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_comissão" name="tex_conta_comissão"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_cancelamento">Conta para Cancelamento: </label>
+			<input type="num" id="n_conta_cancelamento" name="n_conta_cancelamento"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_cancelamento" name="tex_conta_cancelamento"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_antecipação">Conta de Antecipação: </label>
+			<input type="num" id="n_conta_antecipação" name="n_conta_antecipação"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_antecipação" name="tex_conta_antecipação"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_débito">Conta de Ajuste Débito: </label>
+			<input type="num" id="n_conta_débito" name="n_conta_débito"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_débito" name="tex_conta_débito"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_credito">Conta de Ajuste Crédito: </label>
+			<input type="num" id="n_conta_credito" name="n_conta_credito"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_credito" name="tex_conta_credito"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_despesas">Conta de Despesas de Aluguel: </label>
+			<input type="num" id="n_conta_despesas" name="n_conta_despesas"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_despesas" name="tex_conta_despesas"  minlength="3" maxlength="255">
+			<br><br>
+			
+			<label for="n_conta_compensação">Conta de Compensação: </label>
+			<input type="num" id="n_conta_compensação" name="n_conta_compensação"  minlength="3" maxlength="255">
+			<input type="text" id="tex_conta_compensação" name="tex_conta_compensação"  minlength="3" maxlength="255">
+			<br><br>
+		
+			<input style="background-color:#F5DA82" type="submit" value="Inserir">
+			<input style="background-color:#F5DA82" type="submit" value="Cancelar">
+			<input style="background-color:#F5DA82" type="submit" value="Log">
+		</form>
